@@ -13,10 +13,10 @@ and env = (ident * value) list
 (** The Stack register *)
 type stack = value list
 (** The Control register *)
-type directive =
+type instruction =
   | TERM of term
   | APPLY
-type control = directive list
+type control = instruction list
 (** The Dump register *)
 type dump = (stack * env * control) list
 
